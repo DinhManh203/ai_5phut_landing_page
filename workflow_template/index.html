@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow mẫu - Tự động hóa với AI hiệu quả</title>
+    <meta name="description" content="Tải miễn phí các workflow AI đã triển khai sẵn, giúp bạn tiết kiệm thời gian và tối ưu hiệu suất.">
+    <meta name="keywords" content="AI workflow, automation, tự động hóa, chatbot, email marketing, CRM AI">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mint': '#10B981',
+                        'mint-dark': '#059669',
+                        'mint-light': '#34D399'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Card hover effect */
+        .workflow-card {
+            transition: all 0.3s ease;
+        }
+        
+        .workflow-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #10B981;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #059669;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-xl font-bold gradient-text">AI 5 Phút</a>
+                </div>
+                
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-600 hover:text-mint transition-colors duration-200">Trang chủ</a>
+                    <a href="../index.html#services" class="text-gray-600 hover:text-mint transition-colors duration-200">Dịch vụ</a>
+                    <a href="../index.html#cta" class="text-gray-600 hover:text-mint transition-colors duration-200">Liên hệ</a>
+                    <a href="#download" class="bg-mint text-white px-4 py-2 rounded-lg hover:bg-mint-dark transition-colors duration-200">
+                        Tải ngay
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-gray-600" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white border-t border-gray-100" id="mobileMenu">
+            <div class="px-4 py-3 space-y-2">
+                <a href="../index.html" class="block py-2 text-gray-600 hover:text-mint transition-colors duration-200">Trang chủ</a>
+                <a href="../index.html#services" class="block py-2 text-gray-600 hover:text-mint transition-colors duration-200">Dịch vụ</a>
+                <a href="../index.html#cta" class="block py-2 text-gray-600 hover:text-mint transition-colors duration-200">Liên hệ</a>
+                <a href="#download" class="block bg-mint text-white px-4 py-2 rounded-lg hover:bg-mint-dark transition-colors duration-200 text-center">
+                    Tải ngay
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center px-4 pt-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-4xl mx-auto text-center animate-fade-in-up">
+            <div class="mb-6">
+                <span class="inline-block bg-mint/10 text-mint px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    <i class="fas fa-project-diagram mr-2"></i>Workflow Templates
+                </span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                <span class="gradient-text">Thư viện Workflow mẫu</span><br>
+                <span class="text-gray-800">AI thực chiến</span>
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-600 mb-8 font-light">
+                Tổng hợp các workflow đã triển khai thực tế
+            </p>
+            <p class="text-lg text-gray-500 mb-12 max-w-3xl mx-auto">
+                Từ chatbot chăm sóc khách hàng, email automation, CRM tích hợp AI, đến các workflow liên kết với Zalo, Telegram, Google Sheets. 
+                Tất cả đã được kiểm nghiệm và sẵn sàng sử dụng ngay.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#download" class="bg-mint text-white px-8 py-4 rounded-lg hover:bg-mint-dark transition-all duration-200 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-download mr-2"></i>Tải về ngay
+                </a>
+                <a href="#workflows" class="bg-gray-100 text-gray-800 px-8 py-4 rounded-lg hover:bg-gray-200 transition-all duration-200 transform hover:scale-105">
+                    <i class="fas fa-list mr-2"></i>Xem danh sách
+                </a>
+            </div>
+            
+            <!-- Hero Image -->
+            <div class="mt-16">
+                <img src="https://via.placeholder.com/800x400/10B981/ffffff?text=AI+Workflow+Dashboard" alt="AI Workflow Dashboard" class="rounded-xl shadow-2xl mx-auto">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Introduction Section -->
+    <section id="introduction" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6">Tại sao nên sử dụng Workflow mẫu?</h2>
+                <div class="w-20 h-1 bg-mint mx-auto mb-8"></div>
+            </div>
+            
+            <div class="space-y-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">Tiết kiệm thời gian và chi phí</h3>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Thay vì phải xây dựng từ đầu, bạn có thể tận dụng những workflow đã được tối ưu và kiểm nghiệm qua thực tế. 
+                            Mỗi workflow tiết kiệm cho bạn hàng chục giờ nghiên cứu và phát triển.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-mint mr-3"></i>Giảm 80% thời gian setup</li>
+                            <li class="flex items-center"><i class="fas fa-check text-mint mr-3"></i>Tránh những lỗi phổ biến</li>
+                            <li class="flex items-center"><i class="fas fa-check text-mint mr-3"></i>Có hướng dẫn chi tiết</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="/images/tiet_kiem_thoi_gian.jpg" alt="Time Saving" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <img src="/images/trien_khai_thuc_te.jpg" alt="Real Business Cases" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">Được triển khai từ case thực tế</h3>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Mỗi workflow trong thư viện đều xuất phát từ nhu cầu thực tế của doanh nghiệp và cá nhân. 
+                            Chúng được tối ưu để mang lại hiệu quả cao nhất trong môi trường làm việc thực tế.
+                        </p>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <p class="text-sm text-gray-600 italic">
+                                "Workflow chatbot của AI 5 Phút giúp tôi giảm 70% thời gian trả lời khách hàng, 
+                                và độ hài lòng của khách hàng tăng rõ rệt." - CEO một startup công nghệ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">Dễ dàng tùy chỉnh và mở rộng</h3>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Tất cả workflow được thiết kế modular, bạn có thể dễ dàng chỉnh sửa theo nhu cầu riêng. 
+                            Kèm theo tài liệu hướng dẫn chi tiết và video demo từng bước.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-mint/5 p-4 rounded-lg text-center">
+                                <i class="fas fa-cogs text-mint text-2xl mb-2"></i>
+                                <p class="text-sm font-semibold">Tùy chỉnh dễ dàng</p>
+                            </div>
+                            <div class="bg-mint/5 p-4 rounded-lg text-center">
+                                <i class="fas fa-expand-arrows-alt text-mint text-2xl mb-2"></i>
+                                <p class="text-sm font-semibold">Mở rộng linh hoạt</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="/images/de_dang_su_dung.jpg" alt="Customizable Workflows" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Workflows Section -->
+    <section id="workflows" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Danh sách Workflow mẫu</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Khám phá bộ sưu tập workflow AI đa dạng, phù hợp với mọi loại hình kinh doanh
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Workflow Card 1 -->
+                <div class="workflow-card bg-white rounded-xl p-6 shadow-sm hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Chatbot chăm sóc khách hàng</h3>
+                    <p class="text-gray-600 mb-4">
+                        Workflow tự động trả lời, phân loại và chuyển tiếp tin nhắn khách hàng. 
+                        Tích hợp với CRM và email follow-up.
+                    </p>
+                    <div class="mb-4">
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs mr-2">Telegram</span>
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs mr-2">Zalo</span>
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">Facebook</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-mint font-semibold">⭐ 4.9/5</span>
+                        <button class="text-mint hover:text-mint-dark font-medium">
+                            <i class="fas fa-download mr-1"></i>Tải về
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Workflow Card 2 -->
+                <div class="workflow-card bg-white rounded-xl p-6 shadow-sm hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-envelope-open-text text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Email Marketing tự động</h3>
+                    <p class="text-gray-600 mb-4">
+                        Chuỗi email nurturing, phân khúc khách hàng và cá nhân hóa nội dung. 
+                        Tích hợp analytics và A/B testing.
+                    </p>
+                    <div class="mb-4">
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs mr-2">MailChimp</span>
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs mr-2">ConvertKit</span>
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">Zapier</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-mint font-semibold">⭐ 4.8/5</span>
+                        <button class="text-mint hover:text-mint-dark font-medium">
+                            <i class="fas fa-download mr-1"></i>Tải về
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Workflow Card 3 -->
+                <div class="workflow-card bg-white rounded-xl p-6 shadow-sm hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users-cog text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">CRM AI tích hợp</h3>
+                    <p class="text-gray-600 mb-4">
+                        Tự động cập nhật thông tin khách hàng, dự đoán xu hướng mua hàng và 
+                        đề xuất chiến lược sales phù hợp.
+                    </p>
+                    <div class="mb-4">
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs mr-2">Salesforce</span>
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs mr-2">HubSpot</span>
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">Pipedrive</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-mint font-semibold">⭐ 4.9/5</span>
+                        <button class="text-mint hover:text-mint-dark font-medium">
+                            <i class="fas fa-download mr-1"></i>Tải về
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Workflow Card 4 -->
+                <div class="workflow-card bg-white rounded-xl p-6 shadow-sm hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-table text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Google Sheets + AI Automation</h3>
+                    <p class="text-gray-600 mb-4">
+                        Tự động xử lý dữ liệu, tạo báo cáo và insights từ Google Sheets. 
+                        Tích hợp AI để phân tích và dự đoán xu hướng.
+                    </p>
+                    <div class="mb-4">
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs mr-2">Google Sheets</span>
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs mr-2">Apps Script</span>
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">OpenAI</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-mint font-semibold">⭐ 4.7/5</span>
+                        <button class="text-mint hover:text-mint-dark font-medium">
+                            <i class="fas fa-download mr-1"></i>Tải về
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Workflow Card 5 -->
+                <div class="workflow-card bg-white rounded-xl p-6 shadow-sm hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fab fa-telegram-plane text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Tích hợp Zalo & Telegram AI</h3>
+                    <p class="text-gray-600 mb-4">
+                        Bot thông minh cho Zalo và Telegram, tự động trả lời, quản lý đơn hàng 
+                        và hỗ trợ khách hàng 24/7.
+                    </p>
+                    <div class="mb-4">
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs mr-2">Zalo OA</span>
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs mr-2">Telegram Bot</span>
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">Webhook</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-mint font-semibold">⭐ 4.8/5</span>
+                        <button class="text-mint hover:text-mint-dark font-medium">
+                            <i class="fas fa-download mr-1"></i>Tải về
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Workflow Card 6 -->
+                <div class="workflow-card bg-white rounded-xl p-6 shadow-sm hover:shadow-xl border border-gray-100">
+                    <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Notion AI Workspace</h3>
+                    <p class="text-gray-600 mb-4">
+                        Tự động tạo nội dung, quản lý tasks và tổng hợp thông tin từ nhiều nguồn 
+                        vào Notion workspace.
+                    </p>
+                    <div class="mb-4">
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs mr-2">Notion API</span>
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs mr-2">Make.com</span>
+                        <span class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">AI Tools</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-mint font-semibold">⭐ 4.6/5</span>
+                        <button class="text-mint hover:text-mint-dark font-medium">
+                            <i class="fas fa-download mr-1"></i>Tải về
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Coming Soon -->
+            <div class="mt-12 text-center">
+                <div class="inline-block bg-gray-100 rounded-lg p-6">
+                    <i class="fas fa-plus-circle text-gray-400 text-3xl mb-3"></i>
+                    <h4 class="text-lg font-semibold text-gray-600 mb-2">Thêm workflow mới mỗi tuần</h4>
+                    <p class="text-gray-500">Đăng ký để nhận thông báo workflow mới nhất</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section id="download" class="py-20 px-4 bg-mint">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+                Bắt đầu sử dụng ngay hôm nay
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Chỉ cần tải và kết nối – workflow của bạn sẽ hoạt động ngay lập tức
+            </p>
+            
+            <!-- Benefits -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white/10 rounded-lg p-6">
+                    <i class="fas fa-download text-3xl mb-3"></i>
+                    <h4 class="font-semibold mb-2">Tải về miễn phí</h4>
+                    <p class="text-sm opacity-90">Tất cả workflow cơ bản hoàn toàn miễn phí</p>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6">
+                    <i class="fas fa-rocket text-3xl mb-3"></i>
+                    <h4 class="font-semibold mb-2">Setup nhanh chóng</h4>
+                    <p class="text-sm opacity-90">Chỉ mất 5-10 phút để có workflow hoàn chỉnh</p>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6">
+                    <i class="fas fa-headset text-3xl mb-3"></i>
+                    <h4 class="font-semibold mb-2">Hỗ trợ 24/7</h4>
+                    <p class="text-sm opacity-90">Cộng đồng và team support luôn sẵn sàng giúp đỡ</p>
+                </div>
+            </div>
+            
+            <!-- Action buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="#" class="bg-white text-mint px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg font-semibold">
+                    <i class="fas fa-download mr-2"></i>Tải ngay Workflow
+                </a>
+                <a href="../index.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-mint transition-all duration-200">
+                    <i class="fas fa-home mr-2"></i>Về trang chủ
+                </a>
+            </div>
+            
+            <!-- Email signup -->
+            <div class="max-w-md mx-auto">
+                <form class="flex flex-col sm:flex-row gap-3" onsubmit="handleDownloadSubmit(event)">
+                    <input 
+                        type="email" 
+                        placeholder="Email để nhận workflow mới" 
+                        required
+                        class="flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white"
+                    >
+                    <button 
+                        type="submit"
+                        class="bg-mint-dark text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200"
+                    >
+                        Đăng ký
+                    </button>
+                </form>
+                <p class="text-sm opacity-75 mt-3">
+                    Nhận thông báo workflow mới + tips sử dụng hiệu quả
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Brand -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">AI 5 Phút</h3>
+                    <p class="text-gray-400">
+                        Hệ sinh thái AI toàn diện cho người Việt
+                    </p>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liên hệ</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <i class="fas fa-envelope mr-2"></i>
+                            <a href="mailto:mrhot.thanhvn@gmail.com" class="hover:text-mint transition-colors">
+                                mrhot.thanhvn@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fab fa-tiktok mr-2"></i>
+                            <a href="https://tiktok.com/@ai5phut" target="_blank" class="hover:text-mint transition-colors">
+                                @ai5phut
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fab fa-youtube mr-2"></i>
+                            <a href="#" target="_blank" class="hover:text-mint transition-colors">
+                                Kênh AI 5 Phút
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liên kết</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <a href="#" class="hover:text-mint transition-colors">Chính sách bảo mật</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-mint transition-colors">Điều khoản sử dụng</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-mint transition-colors">Tài nguyên</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 AI 5 Phút. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+        
+        // Form submission
+        function handleDownloadSubmit(event) {
+            event.preventDefault();
+            // TODO: Integrate with ConvertKit or email service
+            alert('Cảm ơn bạn đã đăng ký! Link tải workflow sẽ được gửi qua email.');
+            event.target.reset();
+        }
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all workflow cards
+        document.querySelectorAll('.workflow-card').forEach(card => {
+            observer.observe(card);
+        });
+        
+        // Add click handlers for download buttons
+        document.querySelectorAll('.workflow-card button').forEach(button => {
+            button.addEventListener('click', function() {
+                const workflowName = this.closest('.workflow-card').querySelector('h3').textContent;
+                alert(`Bắt đầu tải "${workflowName}". Bạn sẽ nhận được email hướng dẫn chi tiết.`);
+            });
+        });
+    </script>
+</body>
+</html>
