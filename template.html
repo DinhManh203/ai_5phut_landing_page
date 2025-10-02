@@ -1,0 +1,102 @@
+<style>
+    .card {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 540px;
+        width: 100%;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-title {
+        color: #10b981;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 24px;
+    }
+
+    .card-description {
+        color: #6b7280;
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 32px;
+    }
+
+    .card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .read-btn {
+        background: #10b981;
+        color: #fff;
+        padding: 14px 28px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+    }
+
+    .read-btn:hover {
+        background: #059669;
+        transform: translateX(3px);
+    }
+
+    .read-btn::after {
+        content: '→';
+        font-size: 18px;
+        transition: transform 0.3s ease;
+    }
+
+    .read-btn:hover::after {
+        transform: translateX(4px);
+    }
+
+    .date {
+        color: #9ca3af;
+        font-size: 15px;
+    }
+
+    @media (max-width: 600px) {
+        .card {
+            padding: 30px;
+        }
+
+        .card-title {
+            font-size: 24px;
+        }
+
+        .card-footer {
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+        }
+    }
+</style>
+
+<div class="card">
+    <h2 class="card-title">
+        The Definitive Guide to AI Agents in 2025: Technical Implementation, Strategic Decisions, and Market Reality
+    </h2>
+    <p class="card-description">
+        AI Agents are THE defining technology trend of 2025... and I've finally written the comprehensive implementation
+        guide that simply doesn't exist anywhere else on the Internet: long read, but worth it.
+    </p>
+    <div class="card-footer">
+        <a href="#" class="read-btn" style="color: #fff;">Read on Substack</a>
+    </div>
+</div>

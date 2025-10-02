@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Kit - AI 5 Phút | Thông tin hợp tác cho đối tác và nhãn hàng</title>
+    <meta name="description" content="Media Kit chi tiết của kênh AI 5 Phút - Thông tin đầy đủ về audience, metrics và cơ hội hợp tác">
+    <meta name="keywords" content="Media Kit, AI 5 Phút, hợp tác, sponsorship, influencer marketing">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Chart.js for analytics charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mint': '#10B981',
+                        'mint-dark': '#059669',
+                        'mint-light': '#34D399'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .animate-slide-in-left {
+            animation: slideInLeft 0.6s ease-out;
+        }
+        
+        .animate-slide-in-right {
+            animation: slideInRight 0.6s ease-out;
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Gradient background */
+        .gradient-bg {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+        }
+        
+        /* Card hover effect */
+        .metric-card {
+            transition: all 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #10B981;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #059669;
+        }
+        
+        /* Floating animation */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Pulse animation for CTA */
+        @keyframes pulse-subtle {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+            }
+        }
+        
+        .animate-pulse-subtle {
+            animation: pulse-subtle 2s infinite;
+        }
+        
+        /* Brand slider animation */
+        @keyframes slide-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        .animate-slide-left {
+            animation: slide-left 20s linear infinite;
+        }
+        
+        .animate-slide-left:hover {
+            animation-play-state: paused;
+        }
+        
+        /* Text clamp utility */
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold gradient-text">AI 5 Phút</a>
+                </div>
+                
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-mint transition-colors duration-200">Trang chủ</a>
+                    <a href="index.html#services" class="text-gray-600 hover:text-mint transition-colors duration-200">Dịch vụ</a>
+                    <a href="#overview" class="text-mint font-medium">Media Kit</a>
+                    <a href="#contact" class="bg-mint text-white px-4 py-2 rounded-lg hover:bg-mint-dark transition-colors duration-200">
+                        Liên hệ hợp tác
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-gray-600" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white border-t border-gray-100" id="mobileMenu">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-mint transition-colors duration-200">Trang chủ</a>
+                <a href="index.html#services" class="block py-2 text-gray-600 hover:text-mint transition-colors duration-200">Dịch vụ</a>
+                <a href="#overview" class="block py-2 text-mint font-medium">Media Kit</a>
+                <a href="#contact" class="block bg-mint text-white px-4 py-2 rounded-lg hover:bg-mint-dark transition-colors duration-200 text-center">
+                    Liên hệ hợp tác
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 pt-16 gradient-bg relative overflow-hidden">
+        <!-- Background decorations -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-32 h-32 bg-white rounded-full animate-float"></div>
+            <div class="absolute top-40 right-20 w-24 h-24 bg-white rounded-full animate-float" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-20 left-1/4 w-40 h-40 bg-white rounded-full animate-float" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto text-center text-white relative z-10 animate-fade-in-up">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Media Kit
+                <br>
+                <span class="text-3xl sm:text-4xl md:text-5xl font-light">AI 5 Phút</span>
+            </h1>
+            <p class="text-xl sm:text-2xl mb-8 font-light opacity-90">
+                Đối tác tin cậy trong hành trình AI transformation
+            </p>
+            <p class="text-lg mb-12 max-w-2xl mx-auto opacity-80">
+                Thông tin đầy đủ về kênh, audience insights và cơ hội hợp tác 
+                dành cho các thương hiệu và đối tác muốn kết nối với cộng đồng AI Việt Nam
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#metrics" class="bg-white text-mint px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-200 transform hover:scale-105 shadow-lg font-medium">
+                    <i class="fas fa-chart-line mr-2"></i>
+                    Xem số liệu
+                </a>
+                <a href="#contact" class="bg-mint-dark text-white px-8 py-4 rounded-lg hover:bg-green-800 transition-all duration-200 transform hover:scale-105 border-2 border-white/20 animate-pulse-subtle">
+                    <i class="fas fa-handshake mr-2"></i>
+                    Đăng ký hợp tác
+                </a>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="mt-16 animate-bounce">
+                <i class="fas fa-chevron-down text-2xl opacity-70"></i>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Channel Overview Section -->
+    <section id="overview" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Tổng quan kênh</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Hệ sinh thái giáo dục AI hàng đầu Việt Nam với cộng đồng năng động
+                </p>
+            </div>
+            
+            <div class="space-y-8 mb-16">
+                <!-- Row 1: TikTok Profile (Optimized Width) -->
+                <div class="flex justify-center animate-slide-in-left">
+                    <div class="w-full max-w-4xl">
+                        <!-- TikTok Header -->
+                        <div class="bg-black rounded-2xl p-8 text-white">
+                            <div class="flex flex-col lg:flex-row items-start lg:items-center space-y-6 lg:space-y-0 lg:space-x-8 mb-6">
+                                <!-- Avatar -->
+                                <div class="w-28 h-28 bg-gradient-to-br from-mint to-mint-dark rounded-full flex items-center justify-center flex-shrink-0 mx-auto lg:mx-0">
+                                    <i class="fas fa-robot text-white text-4xl"></i>
+                                </div>
+                                <!-- Profile Info -->
+                                <div class="flex-1 text-center lg:text-left">
+                                    <h3 class="text-3xl font-bold text-white mb-2">ai5phut</h3>
+                                    <p class="text-gray-300 text-xl mb-4">Thanh Trần - 5 Phút AI</p>
+                                    
+                                    <!-- Follower Stats -->
+                                    <div class="flex justify-center lg:justify-start items-center space-x-8 text-sm">
+                                        <div class="text-center">
+                                            <div class="font-bold text-white text-lg">1</div>
+                                            <div class="text-gray-400">Following</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="font-bold text-white text-lg">72.5K</div>
+                                            <div class="text-gray-400">Followers</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="font-bold text-white text-lg">334.4K</div>
+                                            <div class="text-gray-400">Likes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Action Buttons - Mobile/Desktop Responsive -->
+                                <div class="flex flex-wrap justify-center lg:justify-end gap-3 lg:flex-col lg:space-y-2 lg:w-auto w-full">
+                                    <button class="bg-mint text-black px-6 py-2 rounded-lg font-medium text-sm hover:bg-mint-light transition-colors">
+                                        <i class="fas fa-user-plus mr-2"></i>Following
+                                    </button>
+                                    <button class="bg-gray-700 text-white px-6 py-2 rounded-lg font-medium text-sm hover:bg-gray-600 transition-colors">
+                                        Message
+                                    </button>
+                                    <div class="flex space-x-2">
+                                        <button class="bg-gray-700 text-white px-3 py-2 rounded-lg hover:bg-gray-600 transition-colors">
+                                            <i class="fas fa-share"></i>
+                                        </button>
+                                        <button class="bg-gray-700 text-white px-3 py-2 rounded-lg hover:bg-gray-600 transition-colors">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Bio -->
+                            <div class="text-gray-300 text-base leading-relaxed mb-4 text-center lg:text-left">
+                                AI | Tech | Automation | Dành cho non-techies chỉ với 5 phút mỗi ngày cùng mình.
+                            </div>
+                            
+                            <!-- Link -->
+                            <div class="flex items-center justify-center lg:justify-start space-x-2 text-mint">
+                                <i class="fas fa-link text-sm"></i>
+                                <span class="text-sm">linktr.ee/5phutAI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Row 2: Description + Content (Two Columns) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                    <!-- Left: Description and Additional Info -->
+                    <div class="space-y-6 animate-slide-in-left">
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Kênh giáo dục AI đầu tiên tại Việt Nam tập trung vào ứng dụng thực tế. 
+                            Với phong cách truyền đạt gần gũi, dễ hiểu, chúng tôi giúp mọi người 
+                            từ người mới bắt đầu đến chuyên gia có thể áp dụng AI vào công việc và cuộc sống.
+                        </p>
+                        
+                        <!-- Additional Info Grid -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-mint/10 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-mint">5 phút</div>
+                                <div class="text-sm text-gray-600">Mỗi video</div>
+                            </div>
+                            <div class="bg-mint/10 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-mint">Thực tế</div>
+                                <div class="text-sm text-gray-600">100% case studies</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Platform Tags -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-mint/10 text-mint px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fab fa-tiktok mr-1"></i> TikTok
+                            </span>
+                            <span class="bg-mint/10 text-mint px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fab fa-youtube mr-1"></i> YouTube
+                            </span>
+                            <span class="bg-mint/10 text-mint px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-users mr-1"></i> Skool Community
+                            </span>
+                            <span class="bg-mint/10 text-mint px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-graduation-cap mr-1"></i> Courses
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Visual/Content Card -->
+                    <div class="animate-slide-in-right">
+                        <div class="bg-gradient-to-br from-mint to-mint-dark rounded-2xl p-8 text-white shadow-2xl">
+                            <h4 class="text-xl font-bold mb-6">Nội dung chính</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check-circle text-mint-light"></i>
+                                    <span>AI Automation cho doanh nghiệp</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check-circle text-mint-light"></i>
+                                    <span>Prompt Engineering thực tế</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check-circle text-mint-light"></i>
+                                    <span>AI Tools review & comparison</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check-circle text-mint-light"></i>
+                                    <span>Case studies từ thực tế</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check-circle text-mint-light"></i>
+                                    <span>Workflow templates</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Key Metrics Section -->
+    <section id="metrics" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Số liệu quan trọng</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Dữ liệu thực tế về reach, engagement và tác động của kênh
+                </p>
+            </div>
+            
+            <!-- Main Metrics Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="metric-card bg-white rounded-xl p-6 shadow-sm hover:shadow-xl border border-gray-100 text-center">
+                    <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-white text-xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-900 mb-2">50K+</div>
+                    <div class="text-gray-600">Total Followers</div>
+                    <div class="text-sm text-mint mt-1">+25% tháng qua</div>
+                </div>
+                
+                <div class="metric-card bg-white rounded-xl p-6 shadow-sm hover:shadow-xl border border-gray-100 text-center">
+                    <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-eye text-white text-xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-900 mb-2">2M+</div>
+                    <div class="text-gray-600">Monthly Views</div>
+                    <div class="text-sm text-mint mt-1">Trung bình</div>
+                </div>
+                
+                <div class="metric-card bg-white rounded-xl p-6 shadow-sm hover:shadow-xl border border-gray-100 text-center">
+                    <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-white text-xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-900 mb-2">8.5%</div>
+                    <div class="text-gray-600">Engagement Rate</div>
+                    <div class="text-sm text-mint mt-1">Cao hơn 3x industry</div>
+                </div>
+                
+                <div class="metric-card bg-white rounded-xl p-6 shadow-sm hover:shadow-xl border border-gray-100 text-center">
+                    <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-white text-xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-900 mb-2">5K+</div>
+                    <div class="text-gray-600">Course Students</div>
+                    <div class="text-sm text-mint mt-1">4.9/5 rating</div>
+                </div>
+            </div>
+            
+            <!-- Platform Breakdown -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Platform Stats -->
+                <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                    <h4 class="text-xl font-bold mb-6 text-gray-900">Phân bố theo nền tảng</h4>
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <i class="fab fa-tiktok text-black text-xl"></i>
+                                <span class="font-medium">TikTok</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-bold">35K followers</div>
+                                <div class="text-sm text-gray-500">1.5M monthly views</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <i class="fab fa-youtube text-red-600 text-xl"></i>
+                                <span class="font-medium">YouTube</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-bold">12K subscribers</div>
+                                <div class="text-sm text-gray-500">400K monthly views</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-users text-mint text-xl"></i>
+                                <span class="font-medium">Skool Community</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-bold">3K members</div>
+                                <div class="text-sm text-gray-500">Daily active discussions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Audience Demographics -->
+                <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                    <h4 class="text-xl font-bold mb-6 text-gray-900">Đối tượng khán giả</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <h5 class="font-semibold mb-3">Độ tuổi:</h5>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm">25-34 tuổi</span>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-20 h-2 bg-gray-200 rounded-full">
+                                            <div class="w-3/4 h-2 bg-mint rounded-full"></div>
+                                        </div>
+                                        <span class="text-sm font-medium">45%</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm">35-44 tuổi</span>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-20 h-2 bg-gray-200 rounded-full">
+                                            <div class="w-1/2 h-2 bg-mint rounded-full"></div>
+                                        </div>
+                                        <span class="text-sm font-medium">30%</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm">18-24 tuổi</span>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-20 h-2 bg-gray-200 rounded-full">
+                                            <div class="w-1/4 h-2 bg-mint rounded-full"></div>
+                                        </div>
+                                        <span class="text-sm font-medium">25%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold mb-3">Nghề nghiệp:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-mint/10 text-mint px-3 py-1 rounded-full text-sm">IT/Tech (35%)</span>
+                                <span class="bg-mint/10 text-mint px-3 py-1 rounded-full text-sm">Marketing (25%)</span>
+                                <span class="bg-mint/10 text-mint px-3 py-1 rounded-full text-sm">Business (20%)</span>
+                                <span class="bg-mint/10 text-mint px-3 py-1 rounded-full text-sm">Students (15%)</span>
+                                <span class="bg-mint/10 text-mint px-3 py-1 rounded-full text-sm">Others (5%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Growth Chart -->
+            <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                <h4 class="text-xl font-bold mb-6 text-gray-900">Tăng trưởng 6 tháng qua</h4>
+                <div class="h-64">
+                    <canvas id="growthChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Collaboration Types Section -->
+    <section id="collaboration" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Các dạng hợp tác</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Đa dạng hình thức để phù hợp với mục tiêu marketing của từng thương hiệu
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Sponsored Content -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-video text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Sponsored Content</h3>
+                    <p class="text-gray-700 mb-6">Video review chi tiết sản phẩm/dịch vụ AI với case study thực tế</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i>Video 5-7 phút chuyên sâu</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i>Demo thực tế với use case</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i>Post trên tất cả platform</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i>30-day campaign</li>
+                    </ul>
+                </div>
+                
+                <!-- Product Review -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Product Review</h3>
+                    <p class="text-gray-700 mb-6">Đánh giá chi tiết và so sánh với các giải pháp tương tự</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Test & review kỹ lưỡng</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>So sánh pros & cons</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Honest feedback</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Long-term usage</li>
+                    </ul>
+                </div>
+                
+                <!-- Brand Partnership -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Brand Partnership</h3>
+                    <p class="text-gray-700 mb-6">Hợp tác dài hạn với vai trò brand ambassador</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Multiple touchpoints</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Custom content series</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Community integration</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-600 mr-2"></i>Quarterly campaigns</li>
+                    </ul>
+                </div>
+                
+                <!-- Event Collaboration -->
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-calendar-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Event & Workshop</h3>
+                    <p class="text-gray-700 mb-6">Speaking, hosting hoặc tham gia sự kiện của thương hiệu</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i>Keynote speaker</li>
+                        <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i>Workshop facilitator</li>
+                        <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i>Panel discussion</li>
+                        <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i>Event coverage</li>
+                    </ul>
+                </div>
+                
+                <!-- Course Integration -->
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Course Integration</h3>
+                    <p class="text-gray-700 mb-6">Tích hợp tool/service vào curriculum của khóa học</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-red-600 mr-2"></i>Dedicated module</li>
+                        <li class="flex items-center"><i class="fas fa-check text-red-600 mr-2"></i>Hands-on exercise</li>
+                        <li class="flex items-center"><i class="fas fa-check text-red-600 mr-2"></i>Student projects</li>
+                        <li class="flex items-center"><i class="fas fa-check text-red-600 mr-2"></i>Certificate mention</li>
+                    </ul>
+                </div>
+                
+                <!-- Custom Solution -->
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Custom Solution</h3>
+                    <p class="text-gray-700 mb-6">Giải pháp marketing tùy chỉnh theo nhu cầu riêng</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-gray-600 mr-2"></i>Bespoke content</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gray-600 mr-2"></i>Multi-channel approach</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gray-600 mr-2"></i>Performance tracking</li>
+                        <li class="flex items-center"><i class="fas fa-check text-gray-600 mr-2"></i>ROI measurement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Brand Partners & Featured Video Section -->
+    <section id="brand-partners" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <!-- Brand Partners Slider -->
+            <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 mb-8">
+                <h4 class="text-xl font-bold mb-6 text-gray-900 text-center">Các thương hiệu đã hợp tác</h4>
+                <div class="overflow-hidden">
+                    <div class="flex animate-slide-left space-x-8" id="brandSlider">
+                        <!-- Placeholder brand logos - replace with actual partner logos -->
+                        <div class="flex-shrink-0 w-32 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <span class="text-gray-500 text-sm">Brand 1</span>
+                        </div>
+                        <div class="flex-shrink-0 w-32 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <span class="text-gray-500 text-sm">Brand 2</span>
+                        </div>
+                        <div class="flex-shrink-0 w-32 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <span class="text-gray-500 text-sm">Brand 3</span>
+                        </div>
+                        <div class="flex-shrink-0 w-32 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <span class="text-gray-500 text-sm">Brand 4</span>
+                        </div>
+                        <div class="flex-shrink-0 w-32 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <span class="text-gray-500 text-sm">Brand 5</span>
+                        </div>
+                        <div class="flex-shrink-0 w-32 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <span class="text-gray-500 text-sm">Brand 6</span>
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="flex-shrink-0 w-32 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <span class="text-gray-500 text-sm">Brand 1</span>
+                        </div>
+                        <div class="flex-shrink-0 w-32 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <span class="text-gray-500 text-sm">Brand 2</span>
+                        </div>
+                        <div class="flex-shrink-0 w-32 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <span class="text-gray-500 text-sm">Brand 3</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-gray-500 text-sm mt-4">
+                    Cập nhật thêm logo các thương hiệu đã hợp tác
+                </p>
+            </div>
+            
+            <!-- Featured Video/Highlight -->
+            <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                <h4 class="text-xl font-bold mb-6 text-gray-900 text-center">Video nổi bật</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Video 1 -->
+                    <div class="bg-gray-100 rounded-lg overflow-hidden group hover:shadow-lg transition-all duration-300">
+                        <div class="aspect-video bg-gray-200 relative flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <i class="fas fa-play-circle text-6xl text-white opacity-80 group-hover:opacity-100 transition-opacity relative z-10"></i>
+                            <div class="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded text-sm font-medium">8:30</div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="font-semibold text-gray-900 mb-2 line-clamp-2">Biến AI thành Trợ lý Giong nói trong 20 phút | nền + ElevenLabs (Hoàn toàn Free)</h5>
+                            <p class="text-sm text-gray-600">Demo chi tiết cách tạo AI voice assistant với ElevenLabs</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 2 -->
+                    <div class="bg-gray-100 rounded-lg overflow-hidden group hover:shadow-lg transition-all duration-300">
+                        <div class="aspect-video bg-gray-200 relative flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <i class="fas fa-play-circle text-6xl text-white opacity-80 group-hover:opacity-100 transition-opacity relative z-10"></i>
+                            <div class="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded text-sm font-medium">8:30</div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="font-semibold text-gray-900 mb-2 line-clamp-2">Hệ Thống AI YouTube Strategist - Tự Động lên Chiến Lược, Tìm Video Ideas Mỗi Ngày - nền NOCODE</h5>
+                            <p class="text-sm text-gray-600">Automation workflow cho YouTube content strategy</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 3 -->
+                    <div class="bg-gray-100 rounded-lg overflow-hidden group hover:shadow-lg transition-all duration-300">
+                        <div class="aspect-video bg-gray-200 relative flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <i class="fas fa-play-circle text-6xl text-white opacity-80 group-hover:opacity-100 transition-opacity relative z-10"></i>
+                            <div class="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded text-sm font-medium">8:30</div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="font-semibold text-gray-900 mb-2 line-clamp-2">Tạo Access Token kết nối Facebook trong nền</h5>
+                            <p class="text-sm text-gray-600">Hướng dẫn tích hợp Facebook API với automation</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- View More Button -->
+                <div class="text-center mt-8">
+                    <a href="#" class="inline-flex items-center bg-mint text-white px-6 py-3 rounded-lg hover:bg-mint-dark transition-colors duration-200 font-medium">
+                        <i class="fab fa-youtube mr-2"></i>
+                        Xem thêm video trên YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact & CTA Section -->
+    <section id="contact" class="py-20 px-4 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">Sẵn sàng hợp tác?</h2>
+            <p class="text-lg mb-12 opacity-90">
+                Hãy cùng tạo ra những campaign marketing ấn tượng và hiệu quả
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="mailto:mrhot.thanhvn@gmail.com?subject=Media Kit - Collaboration Inquiry" 
+                   class="bg-white text-mint px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-200 transform hover:scale-105 shadow-lg font-medium">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Gửi email ngay
+                </a>
+                <a href="#" onclick="downloadMediaKit()" 
+                   class="bg-mint-dark text-white px-8 py-4 rounded-lg hover:bg-green-800 transition-all duration-200 transform hover:scale-105 border-2 border-white/20">
+                    <i class="fas fa-download mr-2"></i>
+                    Tải Media Kit PDF
+                </a>
+            </div>
+            
+            <!-- Quick Form -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-2xl mx-auto">
+                <h4 class="text-xl font-bold mb-6">Hoặc để lại thông tin nhanh</h4>
+                <form class="space-y-4" onsubmit="handleQuickForm(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input 
+                            type="text" 
+                            placeholder="Tên công ty" 
+                            required
+                            class="px-4 py-3 rounded-lg bg-white/20 border border-white/30 placeholder-white/70 text-white focus:outline-none focus:border-white/50 transition-colors"
+                        >
+                        <input 
+                            type="email" 
+                            placeholder="Email liên hệ" 
+                            required
+                            class="px-4 py-3 rounded-lg bg-white/20 border border-white/30 placeholder-white/70 text-white focus:outline-none focus:border-white/50 transition-colors"
+                        >
+                    </div>
+                    <select required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:border-white/50 transition-colors">
+                        <option value="">Loại hợp tác quan tâm</option>
+                        <option value="sponsored-content">Sponsored Content</option>
+                        <option value="product-review">Product Review</option>
+                        <option value="brand-partnership">Brand Partnership</option>
+                        <option value="event-collaboration">Event & Workshop</option>
+                        <option value="course-integration">Course Integration</option>
+                        <option value="custom-solution">Custom Solution</option>
+                    </select>
+                    <textarea 
+                        placeholder="Mô tả ngắn về dự án..." 
+                        rows="3"
+                        class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 placeholder-white/70 text-white focus:outline-none focus:border-white/50 transition-colors resize-none"
+                    ></textarea>
+                    <button 
+                        type="submit"
+                        class="w-full bg-white text-mint px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 font-medium"
+                    >
+                        Gửi yêu cầu hợp tác
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Brand -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 gradient-text">AI 5 Phút</h3>
+                    <p class="text-gray-400 mb-4">
+                        Hệ sinh thái AI toàn diện cho người Việt
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-mint transition-colors">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-mint transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-mint transition-colors">
+                            <i class="fas fa-users text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-mint transition-colors">Trang chủ</a></li>
+                        <li><a href="index.html#services" class="hover:text-mint transition-colors">Dịch vụ</a></li>
+                        <li><a href="#overview" class="hover:text-mint transition-colors">Channel Overview</a></li>
+                        <li><a href="#metrics" class="hover:text-mint transition-colors">Metrics</a></li>
+                        <li><a href="#collaboration" class="hover:text-mint transition-colors">Collaboration</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liên hệ hợp tác</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <i class="fas fa-envelope mr-2"></i>
+                            <a href="mailto:mrhot.thanhvn@gmail.com" class="hover:text-mint transition-colors">
+                                mrhot.thanhvn@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone mr-2"></i>
+                            <a href="tel:0981349666" class="hover:text-mint transition-colors">
+                                0981349666
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe mr-2"></i>
+                            <a href="https://ai5phut.com" target="_blank" class="hover:text-mint transition-colors">
+                                ai5phut.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 AI 5 Phút. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+        
+                // Growth Chart
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('growthChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6'],
+                    datasets: [{
+                        label: 'Tổng followers',
+                        data: [28000, 32000, 38000, 42000, 46000, 50000],
+                        borderColor: '#10B981',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#10B981',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 25000,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return (value / 1000) + 'K';
+                                },
+                                color: '#6B7280'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#6B7280'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: '#ffffff',
+                            bodyColor: '#ffffff',
+                            borderColor: '#10B981',
+                            borderWidth: 1,
+                            callbacks: {
+                                label: function(context) {
+                                    return 'Followers: ' + context.parsed.y.toLocaleString();
+                                }
+                            }
+                        }
+                    },
+                    elements: {
+                        point: {
+                            hoverBackgroundColor: '#059669'
+                        }
+                    }
+                }
+            });
+        });
+        
+        // Quick form submission
+        function handleQuickForm(event) {
+            event.preventDefault();
+            // TODO: Integrate with form service
+            alert('Cảm ơn bạn! Chúng tôi sẽ liên hệ trong vòng 24h.');
+            event.target.reset();
+        }
+        
+        // Download Media Kit
+        function downloadMediaKit() {
+            // TODO: Replace with actual PDF download link
+            alert('Media Kit PDF sẽ được gửi đến email của bạn. Vui lòng liên hệ qua email để nhận link download.');
+        }
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all metric cards and collaboration cards
+        document.querySelectorAll('.metric-card, .bg-gradient-to-br').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nate Jones - Writing Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #10b981;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .subscribe-btn {
+            background-color: #10b981;
+            color: #ffffff;
+            padding: 0.5rem 1.25rem;
+            border-radius: 0.5rem;
+            border: 2px solid #10b981;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #059669;
+            border-color: #059669;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 5% 3rem;
+            background-color: #ffffff;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 2rem 5% 4rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+            justify-items: center;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            width: 400px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #10b981;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .card p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .read-btn {
+            background-color: #10b981;
+            color: #ffffff;
+            padding: 0.625rem 1.25rem;
+            border-radius: 0.5rem;
+            border: 2px solid #10b981;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        .read-btn:hover {
+            background-color: #059669;
+            border-color: #059669;
+        }
+
+        .date {
+            color: #94a3b8;
+            font-size: 0.875rem;
+        }
+
+        footer {
+            background-color: #f9fafb;
+            padding: 2rem 5%;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-left {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            color: #6b7280;
+            font-size: 1.25rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #10b981;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #10b981;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Nate Jones</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#writing">Writing</a>
+            <a href="#prompts">Prompts and Guides</a>
+            <button class="subscribe-btn">Subscribe on Substack →</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Popular Writing</h1>
+        <p>A collection of my most-read deep dives on AI strategy, implementation, and leadership.</p>
+    </section>
+
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <h3>The Complete AI Learning Roadmap for 2025: From Zero to ChatGPT-5 Ready before ChatGPT-5 Comes Out</h3>
+                <p>I wrote the #1 Guide I wish I had starting out: fresh GPT-5 coverage, no-fluff explanations, a curated learning toolkit, and the influencers, researchers, and builders to follow now.</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Jun 18, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Ready for ChatGPT-5: Grab a Complete 138 Page Prompting Guide That's a Complete Operating System for Life and Work</h3>
+                <p>Get ahead of ChatGPT-5 with my 132 page prompt playbook that's built to fully harness the full power of today's models to tackle strategy, leadership, and work/life problems with systematic AI workflows</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Jun 26, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Beyond the Perfect Prompt: The Definitive Guide to Context Engineering—The Next Revolution in Artificial Intelligence</h3>
+                <p>Why context engineering will define how intelligent systems work, the difference you need to understand it now in order to understand AI agents, the evolution of AI job roles, and where AI is going in 2026!</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Jun 20, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>The Definitive Guide to AI Agents in 2025: Technical Implementation, Strategic Decisions, and Market Reality</h3>
+                <p>AI Agents are THE defining technology trend of 2025... and I've finally written the comprehensive implementation guide that simply doesn't exist anywhere else on the Internet: long read, but worth it.</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Jun 17, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>I Summarized Mary Meeker's Incredible 340 Page 2025 AI Trends Deck—Here's Her Big Picture Response, and What You Can Learn</h3>
+                <p>Yes, it's really 340 pages, and yes I really compressed it down, called out key takeaways, and shared what you can actually learn about building in tech based on 2025 macro trends.</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Jun 02, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Learn AI The Easy Way: A Complete Visual Guide to All 16 of the Best AI Models In the World, Including ChatGPT, Claude, Grok, and More!</h3>
+                <p>This one is for anyone who's ever had trouble picking an AI model. Now you can: visual printable use cards, explainers for kids and adults alike, and an overview of the 16 best models in the world.</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Jun 01, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Surfing the Guardrails: 7 Production-Grade Prompting Patterns I Stole from Claude's (Alleged) System Prompt</h3>
+                <p>A 10,000-word system prompt leak reveals a new 80-20 rule for prompting and challenges us to be specific (and defensive!) in how we prompt. I dig into the specific tactics and how to apply them here.</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">May 29, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Taming the Genie: How to Read the Code That AI Genies Wished Into Existence</h3>
+                <p>You've rubbed the lamp - an AI genie handed you 1,000 shiny lines and it all runs, for now. Peek behind the purple smoke, trace each spell, and keep AI genie's wonderful magic from biting back.</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">May 07, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Your Prompt is the Product: Working with o3 & o4-mini-high in the Agentic Era</h3>
+                <p>A hands-on playbook for turning OpenAI's newest reasoning models into agents that think, verify, and act—plus key prompt simplifiers that work with more advanced, self-reasoning models!</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Apr 24, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>We killed your startup, lol—what to build when Claude ships shipping better models</h3>
+                <p>What do, build when—look: Just keep getting better! I wrote a guide for builders, startup founders, and frankly anyone who's worried these days about their job because they work in AI.</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Apr 22, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Your Team is Using AI Wrong: The Hidden Insights Behind High-Performing AI Teams</h3>
+                <p>The best teams I see using AI differently—they've discovered something deeper about how humans and machines think together. Here's what everyone else is missing</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Apr 11, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>The AI Resume Survival Guide (for 2025 and Beyond)</h3>
+                <p>Resumes aren't dying (that jobs anymore because of AI. So I wrote a reel for the AI age: how to talk about AI well, how to use AI in resume creation, and how to handle AI resume checkers.</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Apr 15, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>How I Think About MCP: A Practical Guide to Model Context Protocol and AI Agents</h3>
+                <p>What Model Context Protocol really is, where it will matter (the answer will surprise you to APIs and LangChains and why I think it's the cutting edge of software on the web now.</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Apr 09, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>From 0 to 5K: The Complete Simplified Guide to Getting Going with AI</h3>
+                <p>A lean guide to turning AI into your daily partner—from spike-driven development to workflows that make everything from writing to analysts WAY easier. Aimed at beginners this time!</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Apr 08, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>My Prompt Stack for Work: 16 Prompts in My AI Toolkit That Make Work a LOT Easier</h3>
+                <p>Thr prompts cover everything from presentations to product to analyzing customer data to smart tradeoff thinking... and how I'm using smart prompts to make AI a true partner at work.</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Apr 04, 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Nate's Secret Sauce: A Prompt Engineering Masterclass using 19 Prompts To Write a 47-Page Report on the History of AI</h3>
+                <p>A Complete Guide to how I use ChatGPT-4o, o3-mini-high, o1-Pro, and Deep Research to Craft Prompts That Unlock Incredible Deep Dive Research. 40+ Prompts, 447 Page Report Included!</p>
+                <div class="card-footer">
+                    <a href="#" class="read-btn">Read on Substack →</a>
+                    <span class="date">Apr 02, 2025</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
